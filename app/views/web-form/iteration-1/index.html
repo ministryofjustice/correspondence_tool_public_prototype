@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  <form action="iteration-1/confirmation" class="form">
+
+    <h1 class="form-title heading-xlarge">
+      Contact Ministry of Justice
+    </h1>
+
+    <!-- Full name -->
+    <div class="form-group">
+      <label class="form-label" for="full-name">Name</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <!-- National Insurance number -->
+    <div class="form-group">
+      <label class="form-label" for="ni-number">
+        Email
+        <span class="form-hint">
+          We will only use this to send you a response.
+        </span>
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="ni-number">
+        Email confirmation
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="correspondence_type">
+        Type of correspondence
+      </label>
+      <select class="form-control" name="correspondence[type]" id="correspondence_type">
+        <option value="">Please select an option</option>
+        <option value="general_enquiries">General enquiries</option>
+        <option value="freedom_of_information_request">Freedom of information request</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="correspondence_topic">
+        Topic
+      </label>
+      <select class="form-control" name="correspondence[topic]" id="correspondence_topic"><option value="">Please select an option</option>
+        <option value="prisons">Prisons</option>
+        <option value="courts">Courts</option>
+        <option value="legal_aid">Legal aid</option>
+        <option value="probation">Probation</option>
+        <option value="i_don&#39;t_know/more_than_one/other">I don&#39;t know/more than one/other</option>
+      </select>
+      </div>
+
+    <div class="form-group">
+      <label class="form-label" for="correspondence_message">Message</label>
+      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+    </div>
+   
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Send">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

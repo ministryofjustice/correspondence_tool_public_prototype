@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  <form action="3-personal-details" class="form">
+
+    <h1 class="form-title heading-medium">
+      What would you like to say?
+    </h1>
+
+    <div class="form-group">
+      <label class="form-label" for="correspondence_message">Message</label>
+      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+    </div>
+   
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
