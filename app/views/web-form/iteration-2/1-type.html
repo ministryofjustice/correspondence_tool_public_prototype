@@ -18,22 +18,30 @@
 
       <fieldset>
 
-      <label class="block-label" for="waste-type-1">
-        <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
-        Complaint
+      <label class="block-label" for="topic-1">
+        <input id="topic-1" name="topics" type="checkbox" value="topic-complaint">
+        Make a complaint
       </label>
-      <label class="block-label" for="waste-type-2">
-        <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+      <label class="block-label" for="wtopic-2">
+        <input id="topic-2" name="topics" type="checkbox" value="topic-thankyou">
         Thank you
       </label>
-      <label class="block-label" for="waste-type-3">
-        <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
-        Freedom of information request
+      <label class="block-label" for="topic-3">
+        <input id="topic-3" name="topics" type="checkbox" value="topic-foi">
+        Make a Freedom of information request
       </label>
-      <label class="block-label" for="waste-type-4">
-        <input id="waste-type-4" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label class="block-label" for="topic-4" data-target="topic-other-form">
+        <input id="topic-4" name="topics" type="checkbox" value="topic-other">
         Other
       </label>
+      
+      <div class="panel panel-border-narrow js-hidden" id="topic-other-form">
+        <label for="topic-other-form-field" class="form-label">
+          What is the nature of your topic?
+        </label>
+        <input class="form-control" type="text" id="topic-other-form-field">
+        </div>
+
 
       </fieldset>
 

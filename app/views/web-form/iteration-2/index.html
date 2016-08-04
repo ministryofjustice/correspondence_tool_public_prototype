@@ -18,22 +18,29 @@
 
       <fieldset>
 
-      <label class="block-label" for="waste-type-1">
-        <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+      <label class="block-label" for="division-1">
+        <input id="division-1" name="divisions" type="checkbox" value="division-courts">
         Courts and tribunals
       </label>
-      <label class="block-label" for="waste-type-2">
-        <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+      <label class="block-label" for="division-2">
+        <input id="division-2" name="divisions" type="checkbox" value="division-prisons">
         Prisons and probation
       </label>
-      <label class="block-label" for="waste-type-3">
-        <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label class="block-label" for="division-3">
+        <input id="division-3" name="divisions" type="checkbox" value="division-legal">
         Legal aid
       </label>
-      <label class="block-label" for="waste-type-4">
-        <input id="waste-type-4" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label class="block-label" for="division-4" data-target="division-other-form">
+        <input id="division-4" name="divisions" type="checkbox" value="division-other">
         Other
       </label>
+      
+      <div class="panel panel-border-narrow js-hidden" id="division-other-form">
+        <label for="division-other-form-field" class="form-label">
+          What would you like to contact us about?
+        </label>
+        <input class="form-control" type="text" id="division-other-form-field">
+        </div>
 
       </fieldset>
 
