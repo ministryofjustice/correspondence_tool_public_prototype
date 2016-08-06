@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  <form action="confirmation" class="form">
+
+    <h1 class="form-title heading-large">
+      Your details
+    </h1>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">First name</label>
+      <input name="fullname" type="text" class="form-control" id="full-name">
+    </div>
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Last name</label>
+      <input name="fullname" type="text" class="form-control" id="full-name">
+    </div>
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">
+        Email
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">
+        Phone
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+   
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Send">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

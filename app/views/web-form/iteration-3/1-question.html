@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  <form action="2-message" class="form">
+
+    <h1 class="form-title heading-large">
+      What is your question about?
+    </h1>
+
+    <div class="form-group">
+      <fieldset>
+        <label class="block-label" for="topic-1">
+          <input id="topic-1" name="topics" type="radio" value="topic-complaint">
+          jobs at the Ministry of Justice
+        </label>
+        <label class="block-label" for="topic-2">
+          <input id="topic-2" name="topics" type="radio" value="topic-thankyou">
+          Government Equalities Office (GEO)
+        </label>
+        <label class="block-label" for="topic-3" data-target="topic-other-form">
+          <input id="topic-3" name="topics" type="radio" value="topic-other">
+          other
+        </label>
+        
+        <div class="panel panel-border-narrow js-hidden" id="topic-other-form">
+          <label for="topic-other-form-field" class="form-label">
+            What is your question about?
+          </label>
+          <input class="form-control" type="text" id="topic-other-form-field">
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

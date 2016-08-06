@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  <form action="iteration-3/1-question" class="form">
+
+    <h1 class="form-title heading-large">
+      I would like to submit a:
+    </h1>
+    <div class="form-group">
+      <fieldset>
+	      <label class="block-label" for="division-1">
+	        <input id="division-1" name="divisions" type="radio" value="division-courts">
+	        question <a href="iteration-3/1-question">+</a>
+	      </label>
+	      <label class="block-label" for="division-2">
+	        <input id="division-2" name="divisions" type="radio" value="division-prisons">
+	        comment/feedback <a href="iteration-3/1-comment">+</a>
+	      </label>
+	      <label class="block-label" for="division-3">
+	        <input id="division-3" name="divisions" type="radio" value="division-legal">
+	        complaint <a href="iteration-3/1-complaint">+</a>
+	      </label>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+  <form action="3-personal-details" class="form">
+
+    <h1 class="form-title heading-large">
+      Your question
+    </h1>
+
+    <div class="form-group">
+      <p>You might get the information you need more quickly if you call the Ministry of Justice on 0000 000 0000.</p>
+      <p>If you’d prefer to submit your question in writing through this form, please be aware that we aim to respond within 15 working days.
+      </p>
+   
+       <h2 class="heading-medium" for="correspondence_message">
+        What is your question?
+      </h2>
+      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+    </div>
+
+    <h2 class="heading-medium">
+        Do you need to attach a document?
+      </h2>
+      <div class="form-group">
+        <fieldset class="inline">
+          <label class="block-label" for="division-1">
+            <input id="division-1" name="divisions" type="radio" value="division-courts">
+            yes
+          </label>
+          <label class="block-label" for="division-2">
+            <input id="division-2" name="divisions" type="radio" value="division-prisons">
+            no
+          </label>
+        </fieldset>
+      </div>
+   
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
