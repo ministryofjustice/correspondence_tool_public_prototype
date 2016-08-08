@@ -39,6 +39,42 @@ router.get('/examples/over-18', function (req, res) {
 
 });
 
+
+// Branching-question
+router.get('/web-form/iteration-3/no-page-exists', function (req, res) {
+  var category = req.query.category;
+
+  if (category == "question"){
+    res.redirect("1-question");
+
+  } else if (category == "comment"){
+    res.redirect('1-comment');
+
+  } else if (category == "complaint"){
+    res.redirect('1-complaint');
+  }
+});
+
+// Branching-complaint
+router.get('/web-form/iteration-3/no-page-exists', function (req, res) {
+  var complaint = req.query.complaint;
+
+  if (complaint == "complaint-moj"){
+    res.redirect("2-complaint-moj");
+
+  } else if (category == "complaint-neighbour"){
+    res.redirect('2-complaint-neighbour');
+
+  } else if (category == "complaint-other"){
+    res.redirect('2-complaint-other');
+  }
+});
+
+
+
+
+
+
 // add your routes here
 
 module.exports = router;
