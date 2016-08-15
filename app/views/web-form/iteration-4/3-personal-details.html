@@ -23,30 +23,39 @@
       <input name="fullname" type="text" class="form-control" id="full-name">
     </div>
     <div class="form-group">
-
-
-    <div class="form-group">
-      <label class="form-label-bold" for="correspondence_user_id">Role</label>
-        <select class="form-control drafter_select" name="correspondence[user_id]" id="correspondence_user_id">
-          <option value="">Please select</option>
-          <option value="1">Charity</option>
-          <option value="2">Commercial organisation</option>
-          <option value="3">Local Authority</option>
-          <option value="4">Member of the public</option>
-          <option value="5">MP</option>
-          <option value="3">Press</option>
-          <option value="4">Solicitor</option>
-          <option value="5">Other</option>
-        </select>
-    </div>
-
-
-    <div class="form-group">
       <label class="form-label-bold" for="ni-number">
         Email
       </label>
       <input type="text" class="form-control" id="ni-number">
     </div>
+
+    <div class="form-group">
+      <fieldset class="inline">
+        <label class="block-label" for="division-1" data-target="role-type">
+          <input id="division-1" name="divisions" type="checkbox" value="division-courts">I am writing on behalf of a business
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+        <fieldset>
+          <div class="panel panel-border-narrow js-hidden" id="role-type">  
+            <label for="topic-other-form-field" class="form-label-bold">What is your role?</label>
+            <label class="block-label" for="division-1">journalist
+              <input id="division-1" name="divisions" type="radio" value="division-courts"></label>
+            <label class="block-label" for="division-1">member of parliament
+              <input id="division-1" name="divisions" type="radio" value="division-courts"></label>
+            <label class="block-label" for="division-2">solicitor
+              <input id="division-2" name="divisions" type="radio" value="division-prisons"></label>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+
+
+
 
    
 
