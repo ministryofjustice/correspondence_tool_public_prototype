@@ -16,6 +16,10 @@
   with-proposition
 {% endblock %}
 
+{% block after_header %}
+  {% include "includes/phase_banner_alpha.html" %}
+{% endblock %}
+
 {% block body_end %}
   {% include "includes/scripts.html" %}
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
