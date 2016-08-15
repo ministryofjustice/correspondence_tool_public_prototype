@@ -23,13 +23,24 @@
       <input name="fullname" type="text" class="form-control" id="full-name">
     </div>
     <div class="form-group">
-      <label class="form-label-bold" for="full-name">Role
-        <span class="form-hint">
-          (Optional)
-        </span>
-      </label>
-      <input name="fullname" type="text" class="form-control" id="full-name">
+
+
+    <div class="form-group">
+      <label class="form-label-bold" for="correspondence_user_id">Role</label>
+        <select class="form-control drafter_select" name="correspondence[user_id]" id="correspondence_user_id">
+          <option value="">Please select</option>
+          <option value="1">Charity</option>
+          <option value="2">Commercial organisation</option>
+          <option value="3">Local Authority</option>
+          <option value="4">Member of the public</option>
+          <option value="5">MP</option>
+          <option value="3">Press</option>
+          <option value="4">Solicitor</option>
+          <option value="5">Other</option>
+        </select>
     </div>
+
+
     <div class="form-group">
       <label class="form-label-bold" for="ni-number">
         Email
