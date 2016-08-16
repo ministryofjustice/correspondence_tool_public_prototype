@@ -16,8 +16,12 @@
   with-proposition
 {% endblock %}
 
-{% block after_header %}
-  {% include "includes/phase_banner_alpha.html" %}
+{% block content %}
+	<main id="content" role="main">
+	{% include "includes/phase_banner_alpha.html" %}
+	{% block page_content %}
+	{% endblock %}
+	</main>
 {% endblock %}
 
 {% block body_end %}
