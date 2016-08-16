@@ -16,6 +16,14 @@
   with-proposition
 {% endblock %}
 
+{% block content %}
+	<main id="content" role="main">
+	{% include "includes/phase_banner_alpha.html" %}
+	{% block page_content %}
+	{% endblock %}
+	</main>
+{% endblock %}
+
 {% block body_end %}
   {% include "includes/scripts.html" %}
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
