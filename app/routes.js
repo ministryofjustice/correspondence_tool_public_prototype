@@ -75,42 +75,22 @@ router.get('/web-form/iteration-3/complaint', function (req, res) {
 });
 
 
-// Branching-question
+// Branching-type
 router.get('/web-form/iteration-4/intention', function (req, res) {
-  var category = req.query.category;
+  var questiontype = req.query.questiontype;
 
-  if (category == "question"){
-    res.redirect("1-question");
+  if (questiontype == "court"){
+    res.redirect("1-court");
 
-  } else if (category == "comment"){
-    res.redirect('1-comment');
+  } else if (questiontype == "prison"){
+    res.redirect('1-prison');
 
-  } else if (category == "complaint"){
-    res.redirect('1-complaint');
+  } else if (questiontype == "other"){
+    res.redirect('1-other');
   } else {
-    res.redirect("1-question");
+    res.redirect("1-court");
   }
 });
-
-// Branching-complaint
-router.get('/web-form/iteration-4/complaint', function (req, res) {
-  var complaint = req.query.complaint;
-
-  if (complaint == "complaint-moj"){
-    res.redirect("2-complaint-moj");
-
-  } else if (complaint == "complaint-neighbour"){
-    res.redirect('2-complaint-neighbour');
-
-  } else if (complaint == "complaint-other"){
-    res.redirect('2-complaint-other');
-  } else {
-    res.redirect("2-complaint-moj");
-  }
-});
-
-
-
 
 
 

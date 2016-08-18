@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="visually-hidden">
+        What is your question?
+      </h1>
+
+      <form action="2-personal-details" class="form">
+
+        <div class="form-group">
+        <br><br>
+          <label for="message" class="form-title heading-medium">What is your question?
+            <span class="form-hint">We can only respond if you write in English</span>
+          </label>
+          <textarea id="message" class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+        <p>For information about a court or tribunal such as address, contact details, and how to get there, use the <a href="https://www.gov.uk/find-court-tribunal">Find a court or tribunal</a> service.</p>
+
+        <p>If you need to provide evidence, pay a fine, or cannot attend a hearing, contact the court or tribunal dealing with your case.</p>
+
+        <p>If you wish to make a complaint about a court or tribunal, follow the <a href="https://www.gov.uk/government/organisations/hm-courts-and-tribunals-service/about/complaints-procedure">complaints procedure</a>.</p>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
