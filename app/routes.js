@@ -75,7 +75,22 @@ router.get('/web-form/iteration-3/complaint', function (req, res) {
 });
 
 
+// Branching-type
+router.get('/web-form/iteration-4/intention', function (req, res) {
+  var questiontype = req.query.questiontype;
 
+  if (questiontype == "court"){
+    res.redirect("1-court");
+
+  } else if (questiontype == "prison"){
+    res.redirect('1-prison');
+
+  } else if (questiontype == "other"){
+    res.redirect('1-other');
+  } else {
+    res.redirect("1-court");
+  }
+});
 
 
 

@@ -4,41 +4,59 @@
   Contact the Ministry of Justice
 {% endblock %}
 
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
 {% block content %}
+
 <main id="content" role="main">
 
+  <h1 class="heading-xlarge">
+    {% if serviceName %} {{ serviceName }} {% endif %}
+  </h1>
 
-  <form action="/web-form/iteration-3/intention" class="form">
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-    <h1 class="form-title heading-large">
-      I would like to submit a:
-    </h1>
-    <div class="form-group">
-      
-      <fieldset>
-       <label class="block-label" for="category-1">
-	        <input id="category-1" name="category" type="radio" value="question">
-          question
-        
-        </label>
-        <label class="block-label" for="category-2">
-	        <input id="category-2" name="category" type="radio" value="comment">
-          comment/feedback
-	      </label>
-	      
-        <label class="block-label" for="category-3">
-	        <input id="category-3" name="category" type="radio" value="complaint">
-          complaint
-	      </label>
-      </fieldset>
+      <p>Use this service to contact the Ministry of Justice about:</p>
+
+      <ul class="list list-bullet">
+	      <li>courts</li>
+	      <li>prisons</li>
+	      <li>probation services</li>
+	      <li>attendance centres</li>
+      </uL>
+
+      <p>
+        Read more about
+        <a href="https://www.gov.uk/government/organisations/ministry-of-justice/about">
+        what we do</a>.
+      </p>
+
+      <p>This service takes around 10 minutes.</p>
+
+      <p>
+        <a class="button button-start" href="iteration-4/0-type" role="button">Start now</a>
+      </p>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>You can also contact us by post by writing to:</p>
+      <p>102 Petty France<br> 
+		London<br>
+		SW1H 9AJ</p>
+
+    <p>If you are an MP, you can <a href="">submit ministerial correspondence</a>.
 
     </div>
-
-    <div class="form-group">
-      <input type="submit" class="button" value="Continue">
-    </div>
-
-  </form>
+ 
+  </div>
 
 </main>
+
 {% endblock %}
