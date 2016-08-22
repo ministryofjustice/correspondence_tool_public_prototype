@@ -84,6 +84,9 @@ router.get('/web-form/iteration-4/intention', function (req, res) {
 
   } else if (questiontype == "prison"){
     res.redirect('1-prison');
+  
+  } else if (questiontype == "legalaid"){
+    res.redirect('1-legalaid');
 
   } else if (questiontype == "other"){
     res.redirect('1-other');
