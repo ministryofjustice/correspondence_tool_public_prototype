@@ -11,11 +11,14 @@
     <div class="column-two-thirds">
 
       <h1 class="form-title heading-large">
-        What is your name?
+        Your details
       </h1>
 
-      <form action="3-contact-details" class="form">
-
+      <form action="3-summary" class="form">
+        <div class="form-group">
+          <label class="form-label-bold" for="first-name">Title</label>
+            <input name="first-name" type="text" class="form-control" id="first-name">
+        </div>
         <div class="form-group">
           <label class="form-label-bold" for="first-name">First name</label>
             <input name="first-name" type="text" class="form-control" id="first-name">
@@ -23,6 +26,26 @@
         <div class="form-group">
           <label class="form-label-bold" for="last-name">Last name</label>
           <input name="last-name" type="text" class="form-control" id="last-name">
+        </div>
+        <div class="form-group">
+          <label class="form-label-bold" for="ni-number">
+            Email
+          </label>
+          <input type="text" class="form-control" id="ni-number">
+        </div>
+        <div class="form-group">
+          <details>
+            <summary><span class="summary">I don't have an email</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>
+                If you don’t have an email, we can reply to you by post.
+              </p>
+              <label class="form-label-bold" for="ni-number">
+                Full address
+              </label>
+              <textarea rows="4" class="form-control"></textarea>
+            </div>
+          </details>
         </div>
 
 <!--
