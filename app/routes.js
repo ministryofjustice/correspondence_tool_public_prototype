@@ -40,7 +40,7 @@ router.get('/examples/over-18', function (req, res) {
 });
 
 
-// Branching-question
+// Branching-question iteration 3
 router.get('/web-form/iteration-3/intention', function (req, res) {
   var category = req.query.category;
 
@@ -57,7 +57,7 @@ router.get('/web-form/iteration-3/intention', function (req, res) {
   }
 });
 
-// Branching-complaint
+// Branching-complaint iteration 3
 router.get('/web-form/iteration-3/complaint', function (req, res) {
   var complaint = req.query.complaint;
 
@@ -75,8 +75,28 @@ router.get('/web-form/iteration-3/complaint', function (req, res) {
 });
 
 
-// Branching-type
+// Branching-type iteration 4
 router.get('/web-form/iteration-4/intention', function (req, res) {
+  var questiontype = req.query.questiontype;
+
+  if (questiontype == "court"){
+    res.redirect("1-court");
+
+  } else if (questiontype == "prison"){
+    res.redirect('1-prison');
+  
+  } else if (questiontype == "legalaid"){
+    res.redirect('1-legalaid');
+
+  } else if (questiontype == "other"){
+    res.redirect('1-other');
+  } else {
+    res.redirect("1-court");
+  }
+});
+
+// Branching-type iteration 5
+router.get('/web-form/iteration-5/intention', function (req, res) {
   var questiontype = req.query.questiontype;
 
   if (questiontype == "court"){
