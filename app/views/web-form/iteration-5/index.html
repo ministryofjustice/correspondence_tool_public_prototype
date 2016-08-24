@@ -1,60 +1,74 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Contact the Ministry of Justice
-{% endblock %}
-
-{% block proposition_header %}
-  <!-- blank to remove the proposition header -->
-{% endblock %}
-
-{% block header_class %}
-  <!-- blank to remove the proposition header -->
+  Example - Forms
 {% endblock %}
 
 {% block page_content %}
 
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">
-    {% if serviceName %} {{ serviceName }} {% endif %}
-  </h1>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <form action="iteration-1/confirmation" class="form">
 
-      <p>Use this service to contact the Ministry of Justice about:</p>
+    <h1 class="form-title heading-xlarge">
+      Contact Ministry of Justice
+    </h1>
 
-      <ul class="list list-bullet">
-	      <li>courts</li>
-	      <li>prisons</li>
-	      <li>probation services</li>
-	      <li>attendance centres</li>
-      </uL>
 
-      <p>
-        Read more about
-        <a href="https://www.gov.uk/government/organisations/ministry-of-justice/about">
-        what we do</a>.
-      </p>
-
-      <p>
-        <a class="button button-start" href="iteration-4/0-type" role="button">Start now</a>
-      </p>
-
-      <h2 class="heading-medium">Before you start</h2>
-
-      <p>You can also write to us at:</p>
-      <p>102 Petty France<br> 
-		London<br>
-		SW1H 9AJ</p>
-
-    <p>If you wish to submit an Freedom of Information (FOI) request, <br>email <a href="">data.access@justice.gsi.gov.uk</a>.
-
+    <div class="form-group">
+      <div class="form-date">
+        <div class="form-group form-group-year">
+          <label class="form-label-bold" for="dob-year">
+            Title (optional)
+          </label>
+          <input type="text" class="form-control" id="title">
+        </div>
+      </div>
     </div>
- 
-  </div>
+
+
+
+    <div class="form-group">
+      <label class="form-label" for="full-name">First name</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="full-name">Last name</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <!-- National Insurance number -->
+    <div class="form-group">
+      <label class="form-label" for="ni-number">
+        Email
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="correspondence_topic">
+        Topic
+      </label>
+      <select class="form-control" name="correspondence[topic]" id="correspondence_topic"><option value="">Please select an option</option>
+        <option value="court">Courts and tribunals</option>
+        <option value="prison">Prisons and probation</option>
+        <option value="legalaid">Legal aid</option>
+        <option value="other">Something else</option>
+      </select>
+      </div>
+
+    <div class="form-group">
+      <label class="form-label" for="correspondence_message">Message</label>
+      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+    </div>
+   
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Send">
+    </div>
+
+  </form>
 
 </main>
-
 {% endblock %}
