@@ -15,7 +15,34 @@
       Contact the Ministry of Justice
     </h1>
 
+      <div class="form-group">
+          <fieldset>
+            <legend><p class="form-label-bold">What would you like to contact us about?</p></legend>
+            <label class="block-label" for="questiontype-1">
+              <input id="questiontype-1" name="questiontype" type="radio" value="court">
+              courts and tribunals
+            </label>
+            <label class="block-label" for="questiontype-2">
+              <input id="questiontype-2" name="questiontype" type="radio" value="prison">
+              prisons and probation
+            </label>
+            <label class="block-label" for="questiontype-3">
+              <input id="questiontype-3" name="questiontype" type="radio" value="legalaid">
+              legal aid
+            </label>
+            <label class="block-label" for="question-type4">
+              <input id="question-type4" name="questiontype" type="radio" value="other">
+              something else
+            </label>
+          </fieldset>
+        </div>
+
     <div class="form-group">
+      <label class="form-label-bold" for="correspondence_message">Message</label>
+      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+    </div>
+
+     <div class="form-group">
       <label class="form-label-bold" for="full-name">Full name</label>
       <input type="text" class="form-control" id="full-name">
     </div>
@@ -26,23 +53,6 @@
         Email
       </label>
       <input type="text" class="form-control" id="ni-number">
-    </div>
-
-    <div class="form-group">
-      <label class="form-label-bold" for="correspondence_topic">
-        Topic
-      </label>
-      <select class="form-control" name="correspondence[topic]" id="correspondence_topic"><option value="">Please select an option</option>
-        <option value="court">Courts and tribunals</option>
-        <option value="prison">Prisons and probation</option>
-        <option value="legalaid">Legal aid</option>
-        <option value="other">Something else</option>
-      </select>
-      </div>
-
-    <div class="form-group">
-      <label class="form-label-bold" for="correspondence_message">Message</label>
-      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
     </div>
    
 
