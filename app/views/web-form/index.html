@@ -1,75 +1,53 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Example - Forms
+  Contact the Ministry of Justice
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
 
 
-  <form action="confirmation" class="form">
+  <form action="1-type" class="form">
 
-    <h1 class="form-title heading-xlarge">
-      Contact Ministry of Justice
+    <h1 class="form-title heading-medium">
+      What would you like to contact us about?
     </h1>
 
-    <!-- Full name -->
     <div class="form-group">
-      <label class="form-label" for="full-name">Name</label>
-      <input type="text" class="form-control" id="full-name">
-    </div>
 
-    <!-- National Insurance number -->
-    <div class="form-group">
-      <label class="form-label" for="ni-number">
-        Email
-        <span class="form-hint">
-          We will only use this to send you a response.
-        </span>
+      <fieldset>
+
+      <label class="block-label" for="division-1">
+        <input id="division-1" name="divisions" type="checkbox" value="division-courts">
+        Courts and tribunals
       </label>
-      <input type="text" class="form-control" id="ni-number">
-    </div>
-
-    <div class="form-group">
-      <label class="form-label" for="ni-number">
-        Email confirmation
+      <label class="block-label" for="division-2">
+        <input id="division-2" name="divisions" type="checkbox" value="division-prisons">
+        Prisons and probation
       </label>
-      <input type="text" class="form-control" id="ni-number">
-    </div>
-
-    <div class="form-group">
-      <label class="form-label" for="correspondence_type">
-        Type of correspondence
+      <label class="block-label" for="division-3">
+        <input id="division-3" name="divisions" type="checkbox" value="division-legal">
+        Legal aid
       </label>
-      <select class="form-control" name="correspondence[type]" id="correspondence_type">
-        <option value="">Please select an option</option>
-        <option value="general_enquiries">General enquiries</option>
-        <option value="freedom_of_information_request">Freedom of information request</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label class="form-label" for="correspondence_topic">
-        Topic
+      <label class="block-label" for="division-4" data-target="division-other-form">
+        <input id="division-4" name="divisions" type="checkbox" value="division-other">
+        Other
       </label>
-      <select class="form-control" name="correspondence[topic]" id="correspondence_topic"><option value="">Please select an option</option>
-        <option value="prisons">Prisons</option>
-        <option value="courts">Courts</option>
-        <option value="legal_aid">Legal aid</option>
-        <option value="probation">Probation</option>
-        <option value="i_don&#39;t_know/more_than_one/other">I don&#39;t know/more than one/other</option>
-      </select>
-      </div>
 
-    <div class="form-group">
-      <label class="form-label" for="correspondence_message">Message</label>
-      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+      <div class="panel panel-border-narrow js-hidden" id="division-other-form">
+        <label for="division-other-form-field" class="form-label">
+          What would you like to contact us about?
+        </label>
+        <input class="form-control" type="text" id="division-other-form-field">
+        </div>
+
+      </fieldset>
+
     </div>
 
-
     <div class="form-group">
-      <input type="submit" class="button" value="Send">
+      <input type="submit" class="button" value="Continue">
     </div>
 
   </form>

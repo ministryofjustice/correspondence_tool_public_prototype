@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Confirmation page example
+  Contact the Ministry of Justice
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,13 @@
         </p>
       </div>
 
-      <div class="button-holder"><a role="button" class="button button-secondary" href="/web-form/index.html">Finish</a></div>
+      <div>
+        <p>{{ fullname }}</p>
+      </div>
+
+      <div class="button-holder">
+        <a role="button" class="button-secondary" href="index.html">Finish</a>
+      </div>
 
 
     </div>
