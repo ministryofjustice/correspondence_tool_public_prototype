@@ -40,37 +40,23 @@ router.get('/examples/over-18', function (req, res) {
 });
 
 // add your routes here
-// Branching-question iteration 3
+// Branching-question iteration
 router.get('/web-form/intention', function (req, res) {
-  var category = req.query.category;
+  var questiontype = req.query.questiontype;
 
-  if (category == "question"){
-    res.redirect("1-question");
+  if (questiontype == "court"){
+    res.redirect("1-court");
 
-  } else if (category == "comment"){
-    res.redirect('1-comment');
+  } else if (questiontype == "prison"){
+    res.redirect('1-prison');
 
-  } else if (category == "complaint"){
-    res.redirect('1-complaint');
+  } else if (questiontype == "legalaid"){
+    res.redirect('1-legalaid');
+
+  } else if (questiontype == "other"){
+    res.redirect('1-other');
   } else {
-    res.redirect("1-question");
-  }
-});
-
-// Branching-complaint iteration 3
-router.get('/web-form/complaint', function (req, res) {
-  var complaint = req.query.complaint;
-
-  if (complaint == "complaint-moj"){
-    res.redirect("2-complaint-moj");
-
-  } else if (complaint == "complaint-neighbour"){
-    res.redirect('2-complaint-neighbour');
-
-  } else if (complaint == "complaint-other"){
-    res.redirect('2-complaint-other');
-  } else {
-    res.redirect("2-complaint-moj");
+    res.redirect("1-court");
   }
 });
 

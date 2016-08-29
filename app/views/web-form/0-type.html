@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block page_content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="form-title heading-large">
+        My question is about:
+      </h1>
+
+      <form action="/web-form/intention" class="form">
+
+        <div class="form-group">
+          <fieldset>
+            <legend><p class="visually-hidden">What would you like to contact us about?</p></legend>
+            <label class="block-label" for="questiontype-1">
+              <input id="questiontype-1" name="questiontype" type="radio" value="court">
+              courts and tribunals
+            </label>
+            <label class="block-label" for="questiontype-2">
+              <input id="questiontype-2" name="questiontype" type="radio" value="prison">
+              prisons and probation
+            </label>
+            <label class="block-label" for="questiontype-3">
+              <input id="questiontype-3" name="questiontype" type="radio" value="legalaid">
+              legal aid
+            </label>
+            <label class="block-label" for="question-type4">
+              <input id="question-type4" name="questiontype" type="radio" value="other">
+              something else
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
