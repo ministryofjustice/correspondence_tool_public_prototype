@@ -40,5 +40,39 @@ router.get('/examples/over-18', function (req, res) {
 });
 
 // add your routes here
+// Branching-question iteration 3
+router.get('/web-form/intention', function (req, res) {
+  var category = req.query.category;
+
+  if (category == "question"){
+    res.redirect("1-question");
+
+  } else if (category == "comment"){
+    res.redirect('1-comment');
+
+  } else if (category == "complaint"){
+    res.redirect('1-complaint');
+  } else {
+    res.redirect("1-question");
+  }
+});
+
+// Branching-complaint iteration 3
+router.get('/web-form/complaint', function (req, res) {
+  var complaint = req.query.complaint;
+
+  if (complaint == "complaint-moj"){
+    res.redirect("2-complaint-moj");
+
+  } else if (complaint == "complaint-neighbour"){
+    res.redirect('2-complaint-neighbour');
+
+  } else if (complaint == "complaint-other"){
+    res.redirect('2-complaint-other');
+  } else {
+    res.redirect("2-complaint-moj");
+  }
+});
+
 
 module.exports = router;
