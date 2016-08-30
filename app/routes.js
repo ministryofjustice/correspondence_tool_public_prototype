@@ -41,4 +41,23 @@ router.get('/examples/over-18', function (req, res) {
 
 // add your routes here
 
+router.get('/web-form/intention', function (req, res) {
+  var questiontype = req.query.questiontype;
+
+  if (questiontype == "court"){
+    res.redirect("1-court");
+
+  } else if (questiontype == "prison"){
+    res.redirect('1-prison');
+
+  } else if (questiontype == "legalaid"){
+    res.redirect('1-legalaid');
+
+  } else if (questiontype == "other"){
+    res.redirect('1-other');
+  } else {
+    res.redirect("1-court");
+  }
+});
+
 module.exports = router;

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block page_content %}
+
+<main id="content" role="main">
+
+ <div class="grid-row">
+    <div class="column-two-thirds">
+
+  <form action="https://www.gov.uk" class="form">
+
+    <h1 class="form-title heading-large">
+      Give feedback
+    </h1>
+    <div class="form-group">
+      
+    <h2 class="heading-medium">
+      Overall, how did you feel about the service you recieved today?
+    </h2>
+
+      <fieldset>
+       <label style="display:block;" for="feedback-1">
+	        <input id="feedback-1" name="feedback" type="radio" value="feedback-1">
+          Very satisfied
+        </label>
+        <label style="display:block;" for="feedback-2">
+	        <input id="feedback-2" name="feedback" type="radio" value="feedback-2">
+          Satisfied
+	      </label>
+        <label style="display:block;" for="feedback-3">
+	        <input id="feedback-3" name="feedback" type="radio" value="feedback-3">
+          Neither satisfied or dissatisfied
+	      </label>
+        <label style="display:block;" for="feedback-4">
+          <input id="feedback-2" name="feedback" type="radio" value="feedback-4">
+          Dissatisfied
+        </label>
+        <label style="display:block;" for="feedback-5">
+          <input id="feedback-3" name="feedback" type="radio" value="feedback-5">
+          Very dissatisfied
+        </label>
+      </fieldset>
+
+    <h2 class="heading-medium">
+      How could we improve this service?
+    </h2>
+
+    <textarea class="form-control"></textarea>
+
+    <p>(Limit is 1200 characters)</p>
+    <p>Please don't include any personal or financial information, for example your National Insurance or credit card numbers.</p>
+
+
+
+
+
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Send feedback">
+    </div>
+
+  </form>
+
+</div>
+</div>
+
+</main>
+{% endblock %}
