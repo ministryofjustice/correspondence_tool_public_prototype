@@ -4,45 +4,63 @@
   Contact the Ministry of Justice
 {% endblock %}
 
-{% block proposition_header %}
-  <!-- blank to remove the proposition header -->
-{% endblock %}
-
-{% block header_class %}
-  <!-- blank to remove the proposition header -->
-{% endblock %}
-
-{% block content %}
+{% block page_content %}
 
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">
-    {% if serviceName %} {{ serviceName }} {% endif %}
-  </h1>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <form action="confirmation" class="form">
 
-      <p>Use the new alpha service to contact the Ministry of Justice.</p>
+    <h1 class="form-title heading-xlarge">
+      Contact the Ministry of Justice
+    </h1>
 
-      <p>
-        <a class="button button-start" href="0-type" role="button">Start now</a>
-      </p>
+      <div class="form-group">
+          <fieldset>
+            <legend><p class="form-label-bold">What would you like to contact us about?</p></legend>
+            <label class="block-label" for="questiontype-1">
+              <input id="questiontype-1" name="questiontype" type="radio" value="court">
+              courts and tribunals
+            </label>
+            <label class="block-label" for="questiontype-2">
+              <input id="questiontype-2" name="questiontype" type="radio" value="prison">
+              prisons and probation
+            </label>
+            <label class="block-label" for="questiontype-3">
+              <input id="questiontype-3" name="questiontype" type="radio" value="legalaid">
+              legal aid
+            </label>
+            <label class="block-label" for="question-type4">
+              <input id="question-type4" name="questiontype" type="radio" value="other">
+              something else
+            </label>
+          </fieldset>
+        </div>
 
-      <h2 class="heading-medium">Before you start</h2>
-
-      <p>If you do not wish to use the alpha service, you can email us at:
-      <a href="mailto:general.queries@justice.gsi.gov.uk">general.queries@justice.gsi.gov.uk</a>
-
-      <p>You can also write to us at:</p>
-      <p>102 Petty France<br>
-		London<br>
-		SW1H 9AJ</p>
-
+    <div class="form-group">
+      <label class="form-label-bold" for="correspondence_message">Message</label>
+      <textarea class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
     </div>
 
-  </div>
+     <div class="form-group">
+      <label class="form-label-bold" for="full-name">Full name</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <!-- National Insurance number -->
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">
+        Email
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+   
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Send">
+    </div>
+
+  </form>
 
 </main>
-
 {% endblock %}
