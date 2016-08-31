@@ -7,6 +7,7 @@ var path = require('path'),
     app = express(),
     basicAuth = require('basic-auth'),
     bodyParser = require('body-parser'),
+    session = require('express-session'),
     config = require(__dirname + '/app/config.js'),
     port = (process.env.PORT || config.port),
     utils = require(__dirname + '/lib/utils.js'),
@@ -64,6 +65,13 @@ app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
+}));
+
+//Express session
+app.use(session({
+  resave: true,
+  saveUninitialized: true,
+  secret: "s73PQqhiCD0Um57xWFx9VUqq854v1q4B"
 }));
 
 // send assetPath to all views
