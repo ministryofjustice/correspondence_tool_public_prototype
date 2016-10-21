@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block page_content %}
+
+<main id="content" role="main">
+
+  <h1 class="form-title heading-xlarge">
+    Contact the Ministry of Justice
+  </h1>
+
+  <h2 class="heading-medium">Before you start</h2>
+
+    <div class="form-group">
+      <span class="form-label-bold">To find a court or tribunal</span>
+      <p>Use the <a href="https://www.gov.uk/find-court-tribunal">find a court or tribunal</a> service to find details such as:</p>
+      <ul class="list-bullet">
+        <li>address</li>
+        <li>contact details</li>
+        <li>opening times</li>
+        <li>how to get to the court or tribunal</li>
+        <li>the areas of law it covers</li>
+        <li>disabled access to the building</li>
+      </ul>
+    </div>
+
+    <div class="form-group">
+      <span class="form-label-bold">If you are already involved in a case</span>
+      <p>Contact the court or tribunal dealing with your case.</p>
+      <p>Contact details can be found on letters from the court or tribunal.</p>
+    </div>
+
+     <div class="form-group">
+      <span class="form-label-bold">If you've contacted us and are waiting to hear back</span>
+      <p>Please be aware that it can take up to 20 working days to respond.</p>
+    </div>
+
+
+     
+
+      <form method="post" action="/web-form/question" class="form">
+
+       <div class="form-group">
+          <span>If you still need to contact the Ministry of Justice.</span>
+       </div>
+
+        <div class="form-group">
+          <input type="submit" class="button button-start" value="Start now">
+        </div>
+
+      </form>
+
+
+</main>
+{% endblock %}
