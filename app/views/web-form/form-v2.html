@@ -15,9 +15,26 @@
       Contact the Ministry of Justice
     </h1>
 
+    <p class="form-hint">Step 2 of 4</p>
+    <br>
+
       <div class="form-group">
           <fieldset class="inline">
-            <legend><p class="form-label">Is your query about prisons?</p></legend>
+            <legend><p class="form-label">Is it about courts and tribunals?</p></legend>
+            <label class="block-label" for="court-question-1">
+              <input id="court-question-1" name="court-question" type="radio" value="court">
+              Yes
+            </label>
+            <label class="block-label" for="court-question-2" data-target="prison-question-show">
+              <input id="court-question-2" name="court-question" type="radio" value="prison">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend><p class="form-label">Is it about prisons?</p></legend>
             <label class="block-label" for="prison-question-1">
               <input id="prison-question-1" name="prison-question" type="radio" value="court">
               Yes
@@ -28,6 +45,7 @@
             </label>
           </fieldset>
         </div>
+
 
 
 

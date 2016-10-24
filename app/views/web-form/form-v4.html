@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact the Ministry of Justice
+{% endblock %}
+
+{% block page_content %}
+
+<main id="content" role="main">
+
+
+  <form action="confirmation" class="form">
+
+    <h1 class="form-title heading-xlarge">
+      Contact the Ministry of Justice
+    </h1>
+
+    <p class="form-hint">Step 4 of 4</p>
+    <br>
+
+        <div class="form-group">
+          <label class="form-label" for="correspondence_message">Your message</label>
+          <span class="form-hint">Set your message out clearly, including what you're asking for</span>
+          <textarea rows="6" class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+        </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Send your message">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
