@@ -6,36 +6,32 @@
 
 {% block page_content %}
 
-<main id="content" role="main">
-
-
-  <form action="form-v2" class="form">
-
-    <h1 class="form-title heading-xlarge">
+   <h1 class="form-title heading-xlarge">
       Contact the Ministry of Justice
     </h1>
 
-    <p class="form-hint">Step 1 of 4</p>
+ <div class="grid-row">
+    <div class="column-two-thirds">
+
+  <form action="form-v2" class="form">
+
+    <p class="form-hint">Step 1 of 3</p>
     <br>
 
      <div class="form-group">
           <fieldset>
-            <legend><p class="form-label">Why are you contacting the Ministy of Justice?</p></legend>
+            <legend><p class="form-label-bold">Why are you contacting the Ministy of Justice?</p></legend>
             <label class="block-label" for="prison-question-1">
               <input id="prison-question-1" name="prison-question" type="radio" value="court">
               To ask a question
             </label>
             <label class="block-label" for="prison-question-2">
               <input id="prison-question-2" name="prison-question" type="radio" value="court">
-              To provide feedback
+              To provide suggestions or feedback
             </label>
             <label class="block-label" for="prison-question-3">
               <input id="prison-question-3" name="prison-question" type="radio" value="prison">
               To make a complaint
-            </label>
-            <label class="block-label" for="prison-question-4">
-              <input id="prison-question-4" name="prison-question" type="radio" value="prison">
-              Other
             </label>
           </fieldset>
         </div>
@@ -46,5 +42,6 @@
 
   </form>
 
-</main>
+  </div>
+</div>
 {% endblock %}

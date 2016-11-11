@@ -6,36 +6,52 @@
 
 {% block page_content %}
 
-<main id="content" role="main">
-
-
-  <form action="form-v4" class="form">
-
     <h1 class="form-title heading-xlarge">
       Contact the Ministry of Justice
     </h1>
 
-    <p class="form-hint">Step 3 of 4</p>
+ <div class="grid-row">
+    <div class="column-two-thirds">
+
+  <form action="confirmation" class="form">
+
+    <p class="form-hint">Step 3 of 3</p>
     <br>
 
      <div class="form-group">
-      <label class="form-label" for="full-name">Full name</label>
+      <label class="form-label-bold" for="full-name">Full name</label>
       <input type="text" class="form-control" id="full-name">
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="ni-number">
+      <label class="form-label-bold" for="ni-number">
         Email
+        <span class="form-hint">We’ll send a confirmation email and respond to you at this address.</span>
       </label>
       <input type="text" class="form-control" id="ni-number">
     </div>
+
+            <div class="form-group">
+          <label class="form-label-bold" for="correspondence_message">What do you want to tell the Ministry of Justice?
+          <span class="form-hint">
+            
+            <ul class="list-bullet">
+              <li>Write your concern clearly.</li> 
+              <li>Explain any issues you may have.</li> 
+              <li>Be clear about any action you’d like the ministry to take.</li>
+            </ul>
+          </span></label>
+          <textarea style="width:100%;" rows="10" class="form-control" name="correspondence[message]" id="correspondence_message"></textarea>
+        </div>
    
 
     <div class="form-group">
-      <input type="submit" class="button" value="Continue">
+      <input type="submit" class="button" value="Send message">
     </div>
 
   </form>
 
-</main>
+  </div>
+</div>
+
 {% endblock %}
